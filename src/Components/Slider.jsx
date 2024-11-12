@@ -76,7 +76,6 @@ function Slider() {
         ref={sliderRef}
         aria-live="assertive"
         aria-atomic="true"
-        //tabIndex={0} // Make this container focusable
         onKeyDown={handleKeyDown} // Handle arrow keys for navigation
       >
         {SliderImages.map((item, index) => (
@@ -91,7 +90,7 @@ function Slider() {
                 height: window.innerHeight * 0.6,
               }}
               src={item?.image}
-              alt={`Slider image ${index + 1}`}
+              alt={`Slider ${index + 1}`}
             />
           </div>
         ))}
@@ -116,7 +115,7 @@ function Slider() {
         className="sr-only"
         id="image-status"
       >
-        Slider {currentIndex + 1}/{SliderImages.length} image
+        Slider {currentIndex + 1}of{SliderImages.length} 
       </div>
     </div>
   );
