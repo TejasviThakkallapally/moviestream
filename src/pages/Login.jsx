@@ -42,8 +42,8 @@ function Login() {
 
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
+            *isRequired <br />
             <label htmlFor="username" className="block text-gray-700 mb-2">
-              *isRequired <br /><br />
               Username* 
             </label>
             <input
