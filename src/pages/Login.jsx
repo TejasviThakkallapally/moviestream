@@ -43,7 +43,8 @@ function Login() {
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label htmlFor="username" className="block text-gray-700 mb-2">
-              Username
+              *isRequired <br /><br />
+              Username* 
             </label>
             <input
               type="text"
@@ -56,7 +57,7 @@ function Login() {
 
           <div className="mb-4">
             <label htmlFor="password" className="block text-gray-700 mb-2">
-              Password
+              Password*
             </label>
             <input
               type="password"
@@ -69,7 +70,7 @@ function Login() {
 
           <div className="mb-4">
             <label htmlFor="email" className="block text-gray-700 mb-2">
-              Email-Id
+              Email-Id*
             </label>
             <input
               type="email"
