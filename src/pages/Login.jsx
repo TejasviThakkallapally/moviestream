@@ -49,6 +49,7 @@ function Login() {
             <input
               type="text"
               id="username"
+              aria-required="true"
               className="w-full p-2 border border-gray-500 rounded"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
@@ -62,6 +63,7 @@ function Login() {
             <input
               type="password"
               id="password"
+              aria-required="true"
               className="w-full p-2 border border-gray-500 rounded"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -75,6 +77,7 @@ function Login() {
             <input
               type="email"
               id="email"
+              aria-required="true"
               className="w-full p-2 border border-gray-500 rounded "
               value={email}
               onChange={(e) => setEmail(e.target.value)}
