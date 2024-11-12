@@ -62,7 +62,7 @@ function WatchList() {
               className="w-32 h-48 object-cover rounded mr-4"
             />
             <div className="flex flex-col">
-              <h3 className="text-lg font-bold">{movie.title}</h3>
+              <h2 className="text-lg font-bold">{movie.title}</h2>
               <a
                 href={movie.youtubeLink}
                 target="_blank"

@@ -123,7 +123,7 @@ function Search() {
 
   return (
     <div role="main" id="main-content" className="p-4">
-      <h1 className="text-2xl text-white font-bold">Search for Genres</h1>
+      <h1 id="search_label" className="text-2xl text-white font-bold">Search for Genres</h1>
       <form className="mt-4" onSubmit={handleSubmit}>
         <input
           type="text"
@@ -133,6 +133,7 @@ function Search() {
           onKeyDown={handleKeyDown}
           onBlur={handleBlur}
           ref={inputRef}
+          aria-labelledby="search_label"
           className="border p-2 w-1/2"
           tabIndex={0}
           role="combobox"

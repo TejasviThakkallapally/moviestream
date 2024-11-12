@@ -5,7 +5,7 @@ function HeaderItem({name, Icon}) {
   <div className="text-white flex items-center gap-3
   text-[18px] font-normal cursor-pointer hover:underline underline-offset-8 mb-3">
     <Icon/>
-    <h2 className="">{name}</h2>
+    <div className="">{name}</div>
   </div>
   )
 }
