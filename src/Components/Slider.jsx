@@ -76,7 +76,7 @@ function Slider() {
         ref={sliderRef}
         aria-live="assertive"
         aria-atomic="true"
-        tabIndex={0} // Make this container focusable
+        //tabIndex={0} // Make this container focusable
         onKeyDown={handleKeyDown} // Handle arrow keys for navigation
       >
         {SliderImages.map((item, index) => (
