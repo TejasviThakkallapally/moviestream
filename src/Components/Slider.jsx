@@ -90,7 +90,7 @@ function Slider() {
                 height: window.innerHeight * 0.6,
               }}
               src={item?.image}
-              alt={`Slider ${index + 1}`}
+              alt=""
             />
           </div>
         ))}
