@@ -58,7 +58,7 @@ function WatchList() {
           >
             <img
               src={movie.image}
-              alt={movie.title}
+              alt=""
               className="w-32 h-48 object-cover rounded mr-4"
             />
             <div className="flex flex-col">

@@ -35,7 +35,7 @@ function MovieView() {
   };
 
   return (
-    <div className="text-yellow-400 px-11">
+    <div role="main" id="main-content" className="text-yellow-400 px-11">
       <h1>{movie?.name || "Movie Title"}</h1> {/* Fallback for movie name */}
       <br />
 

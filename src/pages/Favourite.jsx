@@ -23,7 +23,7 @@ function Favourite() {
         onClick={toggleDropdown}
         aria-expanded={isDropdownOpen}  /* Dynamically set aria-expanded */
         aria-controls="favourite-info"  /* References the ID of the favourite info */
-        aria-label="image description"
+        aria-label="chart description"
         className="bg-gray-700 text-yellow-400 py-2 px-4 rounded-md hover:bg-gray-600 transition-colors"
       >
         Chart Description

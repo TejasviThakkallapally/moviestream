@@ -70,8 +70,8 @@ function AccountPreferences() {
               </div>
             </div>
 
-            <div className="gender mt-4">
-              <label className="block text-gray-700">Gender*</label>
+            <div role="radiogroup" aria-labelledby="gdesc" className="gender mt-4">
+              <p id="gdesc" className="block text-gray-700">Gender*</p>
               <div>
                 <input className="indicator ml-1 border-gray-600" type="radio" id="male" name="gender" value="male" required />
                 <label htmlFor="male" className="inline ml-2">Male</label>

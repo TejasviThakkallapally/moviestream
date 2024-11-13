@@ -50,7 +50,7 @@ function Header() {
         <div className="flex gap-8 items-center sm:flex">
           <img
             src={logo}
-            alt="MovieStream Logo"
+            alt="MovieStream"
             className="w-[50px] md:w-[70px] object-cover"
           />
           <div
