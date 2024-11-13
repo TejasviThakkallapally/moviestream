@@ -39,6 +39,7 @@ function Header() {
   return (
     <div>
       {/* Skip to Main Content Link */}
+
       <a
         href="#main-content"
         className="absolute top-0 left-0 -translate-y-full bg-gray-800 text-white px-4 py-2 text-sm z-50 focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-yellow-400"

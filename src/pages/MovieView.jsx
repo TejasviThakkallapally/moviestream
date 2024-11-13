@@ -4,25 +4,20 @@ import { useLocation } from "react-router-dom";
 
 function MovieView() {
   const location = useLocation();
-  const { movie } = location.state || {};  // Ensure movie is not undefined
-  const desc = useSelector((state) => state.descs[0]?.description); // Fetch description from Redux state
+  const { movie } = location.state || {};
+  const desc = useSelector((state) => state.descs[0]?.description);
 
-  // Log the description to ensure it's correct
-  console.log("Movie Description from Redux:", desc);
+  //console.log("Movie Description from Redux:", desc);
 
-  // State to control dropdown visibility and video playback
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isPlaying, setIsPlaying] = useState(true);
 
-  // Ref to control the video element directly
   const videoRef = useRef(null);
 
-  // Toggle dropdown visibility
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  // Toggle video playback (play/pause)
   const togglePlayback = () => {
     if (videoRef.current) {
       if (isPlaying) {
@@ -36,12 +31,12 @@ function MovieView() {
 
   return (
     <div role="main" id="main-content" className="text-yellow-400 px-11">
-      <h1>{movie?.name || "Movie Title"}</h1> {/* Fallback for movie name */}
+      <h1>{movie?.name || "Movie Title"}</h1>
       <br />
 
       <video
         ref={videoRef}
-        src={movie?.video} // Make sure movie and video are available
+        src={movie?.video}
         autoPlay
         loop
         muted
@@ -51,6 +46,8 @@ function MovieView() {
       {/* Play/Pause Button */}
       <button
         onClick={togglePlayback}
+        aria-pressed={isPlaying ? "true" : "false"} // Toggles between true/false when clicked
+        aria-label={isPlaying ? "Pause gif" : "Play gif"} // Correct action label based on video state
         className="bg-gray-700 text-yellow-400 py-2 px-4 rounded-md hover:bg-gray-600 transition-colors mt-4"
       >
         {isPlaying ? "Pause" : "Play"}
@@ -61,19 +58,19 @@ function MovieView() {
       <div className="mt-4">
         <button
           onClick={toggleDropdown}
-          aria-expanded={isDropdownOpen} // Dynamically set aria-expanded
+          aria-expanded={isDropdownOpen}
           aria-label="More info about movie"
-          aria-controls="movie-info" // References the ID of the movie info
+          aria-controls="movie-info"
           className="bg-gray-700 text-yellow-400 py-2 px-4 rounded-md hover:bg-gray-600 transition-colors"
         >
           Movie Info
         </button>
 
-        {/* Conditionally render description based on dropdown state */}
         {isDropdownOpen && (
           <div
-            id="movie-info" // ID for reference by aria-controls
+            id="movie-info"
             className="mt-2 p-4 bg-gray-800 border border-gray-700 rounded-md"
+            aria-live="polite" // Ensure description changes are read aloud
           >
             <p>{desc}</p>
           </div>
